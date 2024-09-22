@@ -33,9 +33,9 @@
       >
         <div class="navbar-start hidden md:flex">
           <a
-            href="./blog.html"
+            href="./faqs.html"
             class="btn btn-ghost normal-case text-base sm:text-xl bg-lime-400 text-black hover:bg-lime-500"
-            >Blog</a
+            ><i class="fa-regular fa-circle-question"></i>FAQS</a
           >
         </div>
         <div class="navbar-center sm:flex items-center">
@@ -44,7 +44,7 @@
             alt="Logo"
             class="w-8 h-8 sm:w-10 sm:h-10 mr-2"
           />
-          <span class="text-lg sm:text-xl font-bold">Help Bangladesh</span>
+          <span class="text-lg font-bold">Help Bangladesh</span>
         </div>
         <div class="navbar-end">
           <span class="flex items-center gap-2">
@@ -209,6 +209,23 @@
             <!-- History items will be dynamically added here -->
           </div>
         </div>
+      </section>
+      
+      <!-- Donation Success Modal -->
+      <section>
+        <dialog id="donationModal" class="modal modal-bottom sm:modal-middle">
+          <form method="dialog" class="modal-box">
+              <h3 class="font-bold text-lg mb-4">Congrats!</h3>
+              <div class="flex justify-center mb-4">
+                  <img src="./assets/coin.png" alt="Coin" class="h-12 w-12">
+              </div>
+              <p class="py-4">You Have Donated for Humankind</p>
+              <p class="font-bold mb-4">Successfully</p>
+              <div class="modal-action">
+                  <button class="btn">Close confirmation</button>
+              </div>
+          </form>
+      </dialog>
       </section>
     </main>
 
