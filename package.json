@@ -1,0 +1,22 @@
+{
+  "name": "help-bangladesh",
+  "version": "1.0.0",
+  "description": "The devastating floods in Bangladesh have left countless families displaced, homes destroyed, and livelihoods shattered. At **Help Bangladesh**, we believe in the power of community, compassion, and action. Together, we can make a lasting impact on the lives of those affected by this disaster.",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/input.css -o ./public/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheToriqul/Help-Bangladesh.git"
+  },
+  "author": "TheToriqul",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheToriqul/Help-Bangladesh/issues"
+  },
+  "devDependencies": {
+    "daisyui": "^4.12.10",
+    "tailwindcss": "^3.4.12"
+  }
+}
