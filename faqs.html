@@ -26,19 +26,55 @@
 
   <body class="font-lexend mx-4 md:mx-0">
     <!-- Header Section Starts Here -->
-    <header class="">
-      <!-- Navbar Starts Here -->
+    <header
+      class="shadow-md py-4 sticky top-0 z-10 w-full bg-orange-50 bg-opacity-50 backdrop-blur-sm"
+    >
       <nav
-        class="container mx-auto navbar justify-between items-center bg-base-100 shadow-sm sticky top-0 z-10 py-4 px-4"
+        class="container mx-auto flex justify-between items-center py-4 px-4"
       >
-        <div class="navbar-start hidden md:flex">
+        <!-- Navbar Start (FAQS button) -->
+        <div class="navbar-start flex items-center">
+          <!-- Hamburger Menu for mobile -->
+          <div class="dropdown md:hidden">
+            <label tabindex="0" class="btn btn-ghost lg:hidden">
+              <i class="fa-solid fa-bars text-2xl"></i>
+            </label>
+            <ul
+              tabindex="0"
+              class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <!-- FAQ Link -->
+              <li>
+                <a
+                  href="./index.html"
+                  class="text-base sm:text-xl bg-lime-400 text-black hover:bg-lime-500"
+                >
+                  <i class="fa-regular fa-circle-question"></i> FAQS
+                </a>
+              </li>
+              <!-- Account Balance for Mobile -->
+              <li class="flex items-center">
+                <figure class="flex items-center justify-center space-x-2">
+                  <img src="./assets/coin.png" alt="Coin" class="w-6 h-6" />
+                  <span id="accountBalanceMobile" class="font-semibold text-sm">
+                    10000 BDT
+                  </span>
+                </figure>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Regular FAQ link for desktop -->
           <a
             href="./index.html"
-            class="btn btn-ghost normal-case text-base sm:text-xl bg-lime-400 text-black hover:bg-lime-500"
-            >Home</a
+            class="hidden md:flex btn btn-ghost normal-case text-base sm:text-xl bg-lime-400 text-black hover:bg-lime-500"
           >
+            <i class="fa-regular fa-circle-question"></i> FAQS
+          </a>
         </div>
-        <div class="navbar-center sm:flex items-center">
+
+        <!-- Navbar Center (Logo and Title) -->
+        <div class="navbar-center flex items-center">
           <img
             src="./assets/logo.png"
             alt="Logo"
@@ -46,7 +82,9 @@
           />
           <span class="text-lg sm:text-xl font-bold">Help Bangladesh</span>
         </div>
-        <div class="navbar-end">
+
+        <!-- Navbar End (Account Balance for Desktop) -->
+        <div class="navbar-end hidden md:flex">
           <span class="flex items-center gap-2">
             <img src="./assets/coin.png" alt="Coin" class="w-6 h-6" />
             <span id="accountBalance" class="font-bold text-sm sm:text-base"
@@ -69,7 +107,15 @@
             What is the Document Object Model (DOM)?
           </div>
           <div class="collapse-content">
-            <p>The Document Object Model (DOM) is a programming interface for web documents that represents the structure of HTML or XML as a tree of objects. It allows scripting languages like JavaScript to access, manipulate, and dynamically update the content, structure, and style of a web page. The DOM enables interactive features by responding to user events and provides various APIs for traversing and modifying the document.</p>
+            <p>
+              The Document Object Model (DOM) is a programming interface for web
+              documents that represents the structure of HTML or XML as a tree
+              of objects. It allows scripting languages like JavaScript to
+              access, manipulate, and dynamically update the content, structure,
+              and style of a web page. The DOM enables interactive features by
+              responding to user events and provides various APIs for traversing
+              and modifying the document.
+            </p>
           </div>
         </div>
         <div class="collapse collapse-arrow bg-base-200 mb-4">
@@ -78,7 +124,21 @@
             How do you select an element from DOM?
           </div>
           <div class="collapse-content">
-            <p>Elements can be selected from the DOM using several JavaScript methods. The `getElementById` method allows selection of an element by its unique ID, while `getElementsByClassName` retrieves all elements with a specified class name, returning a live HTMLCollection. To select elements by tag name, `getElementsByTagName` can be used, which also returns a live HTMLCollection. For more flexible selection, `querySelector` selects the first matching element using a CSS selector, applicable for classes, IDs, or tags. To select all matching elements, `querySelectorAll` returns a NodeList of all elements that match the specified CSS selector. These methods facilitate easy access to and manipulation of DOM elements based on IDs, classes, or tags.</p>
+            <p>
+              Elements can be selected from the DOM using several JavaScript
+              methods. The `getElementById` method allows selection of an
+              element by its unique ID, while `getElementsByClassName` retrieves
+              all elements with a specified class name, returning a live
+              HTMLCollection. To select elements by tag name,
+              `getElementsByTagName` can be used, which also returns a live
+              HTMLCollection. For more flexible selection, `querySelector`
+              selects the first matching element using a CSS selector,
+              applicable for classes, IDs, or tags. To select all matching
+              elements, `querySelectorAll` returns a NodeList of all elements
+              that match the specified CSS selector. These methods facilitate
+              easy access to and manipulation of DOM elements based on IDs,
+              classes, or tags.
+            </p>
           </div>
         </div>
         <div class="collapse collapse-arrow bg-base-200 mb-4">
@@ -88,16 +148,37 @@
             useful?
           </div>
           <div class="collapse-content">
-            <p>Event delegation is a technique in the DOM where a single event listener is attached to a parent element to manage events for its child elements. This approach takes advantage of event bubbling, allowing events to propagate from child elements to the parent. It is useful because it improves performance by reducing the number of event listeners, simplifies management of dynamically added elements, results in cleaner code, and facilitates easier event handling.</p>
+            <p>
+              Event delegation is a technique in the DOM where a single event
+              listener is attached to a parent element to manage events for its
+              child elements. This approach takes advantage of event bubbling,
+              allowing events to propagate from child elements to the parent. It
+              is useful because it improves performance by reducing the number
+              of event listeners, simplifies management of dynamically added
+              elements, results in cleaner code, and facilitates easier event
+              handling.
+            </p>
           </div>
         </div>
         <div class="collapse collapse-arrow bg-base-200 mb-4">
           <input type="radio" name="my-accordion-2" />
           <div class="collapse-title text-xl font-medium">
-            How do you manipulate an element's attributes and styles using the DOM?
+            How do you manipulate an element's attributes and styles using the
+            DOM?
           </div>
           <div class="collapse-content">
-            <p>Element attributes and styles can be manipulated in the DOM using various JavaScript methods and properties. To modify attributes, the `setAttribute` method sets a specified attribute's value, while `getAttribute` retrieves it, and `removeAttribute` removes the attribute entirely. For styling, the `style` property allows direct changes to inline styles, such as `element.style.color = 'red'`. Additionally, the `classList` property enables management of CSS classes, allowing for adding, removing, or toggling classes with methods like `add`, `remove`, and `toggle`. These techniques enhance interactivity and responsiveness in web applications.</p>
+            <p>
+              Element attributes and styles can be manipulated in the DOM using
+              various JavaScript methods and properties. To modify attributes,
+              the `setAttribute` method sets a specified attribute's value,
+              while `getAttribute` retrieves it, and `removeAttribute` removes
+              the attribute entirely. For styling, the `style` property allows
+              direct changes to inline styles, such as `element.style.color =
+              'red'`. Additionally, the `classList` property enables management
+              of CSS classes, allowing for adding, removing, or toggling classes
+              with methods like `add`, `remove`, and `toggle`. These techniques
+              enhance interactivity and responsiveness in web applications.
+            </p>
           </div>
         </div>
       </section>
