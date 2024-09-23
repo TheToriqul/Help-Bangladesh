@@ -5,8 +5,6 @@
 
 **Help Bangladesh: Together We Can Rebuild** is a donation platform to support flood victims in Bangladesh. This web app is designed for transparent and easy contributions towards relief efforts, providing essential aid to communities in need.
 
-## 🌍 Overview
-
 The **Help Bangladesh** project was created to provide a reliable, user-friendly platform for raising funds to help victims of the floods in Bangladesh. This platform enables global contributors to support critical relief efforts such as providing clean water, shelter, and medical aid.
 
 ## System Architecture Diagram
