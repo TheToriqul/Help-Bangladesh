@@ -24,13 +24,20 @@ function updateAccountBalance() {
 function addToHistory(donationTitle, amount) {
   const historyItem = document.createElement("div");
   historyItem.className = "bg-white rounded-lg shadow-md p-4 mb-4";
+  
+  // Get user's local time and time zone
+  const userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  const formattedDate = new Intl.DateTimeFormat("en-US", {
+    dateStyle: "full",
+    timeStyle: "long",
+    timeZone: userTimeZone
+  }).format(new Date());
+
   historyItem.innerHTML = `
-    <p class="font-bold">${amount} Taka is donated for ${donationTitle}</p>
-    <p class="text-sm text-gray-500">Date: ${new Date().toLocaleString(
-      "en-US",
-      { timeZone: "Asia/Dhaka" }
-    )} (Bangladesh Standard Time)</p>
+    <p class="font-bold">${amount} Taka is donated for: ${donationTitle}</p>
+    <p class="text-sm text-gray-500">Date: ${formattedDate} (${userTimeZone})</p>
   `;
+
   historySection.insertBefore(historyItem, historySection.firstChild);
 }
 
